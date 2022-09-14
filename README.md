@@ -1,5 +1,5 @@
 # Aesthetic-Startpage
-Aesthetic Startpage to boost your productivity and at the same time give your desktop a new aesthetic look.
+A fork of Aesthetic Startpage with pywal theme support and dockerized to get around some browser homepage/new tab restrictions.
 
 # Installation
 1. Download/Clone this repository.
