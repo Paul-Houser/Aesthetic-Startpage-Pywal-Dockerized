@@ -1,8 +1,6 @@
 # Aesthetic-Startpage
 A fork of Aesthetic Startpage with pywal theme support and dockerized to get around some browser homepage/new tab restrictions.
 
-Currently docker works. Pywal coming soon.
-
 # Installation
 1. Download/Clone this repository.
 2. `cd Aesthetic-Startpage-Pywal-Dockerized`
