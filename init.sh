@@ -8,6 +8,7 @@ if [ ! -d "$HOME/.cache" ]; then
   exit
 fi
 
+
 # create directory structure in .cache
 if [ ! -d "$cache_dir" ]; then
   echo "Creating '$cache_dir'..."
@@ -19,13 +20,15 @@ if [ ! -d "$cache_dir" ]; then
   echo "Symlinking themes..."
   ln -s $(pwd)/themes $cache_dir/themes
 
-  echo "Creating '$cache_dir/styles'..."
-  mkdir "$cache_dir/styles"
-  cp ./themes/blue/style.css $cache_dir/styles/style.css
+  echo "Symlinking '$cache_dir/images'..."
+  ln -s $(pwd)/images $cache_dir/images
 
-  echo "Creating '$cache_dir/images'..."
-  mkdir "$cache_dir/images"
-  cp ./themes/minimal/images/gif.gif $cache_dir/images/gif.gif
+  # check if pywal colors exist
+  if [ -f "$HOME/.cache/wal/colors.css" ]; then
+    ln -s $HOME/.cache/wal/colors.css $cache_dir/pywal_colors.css
+  else
+    echo "Pywal colors don't exist in the expected location. Pywal theme may not work properly."
+  fi
 fi
 
 FILEPATH=$(readlink -f "docker/data/default.conf")

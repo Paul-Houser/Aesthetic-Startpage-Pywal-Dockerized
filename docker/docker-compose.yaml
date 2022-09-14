@@ -1,13 +1,13 @@
 version: '3'
 services:
 
-  StartTree:
+  Aesthetic-Startpage:
     image: nginx
     volumes:
-      - $HOME/.cache/Aesthetic-Startpage/styles/colors.css:/usr/share/nginx/html/styles/colors.css # This needs to be changed depending on theme
-      - $HOME/.cache/Aesthetic-Startpage/images/gif.gif:/usr/share/nginx/html/images/gif.gif
+      - $HOME/.cache/Aesthetic-Startpage/images/:/usr/share/nginx/html/images/
+      - $HOME/.cache/Aesthetic-Startpage/themes/:/usr/share/nginx/html/themes/
       - $HOME/.cache/Aesthetic-Startpage/index.html:/usr/share/nginx/html/index.html
-      - $HOME/.cache/Aesthetic-Startpage/styles/style.css:/usr/share/nginx/html/styles/style.css
+      - $HOME/.cache/Aesthetic-Startpage/pywal_colors.css:/usr/share/nginx/html/pywal_colors.css
       - $HOME/.cache/Aesthetic-Startpage/default.conf:/etc/nginx/conf.d/default.conf # modified conf to disable page caching :)
     ports:
     - "8765:80"

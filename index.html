@@ -5,17 +5,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" type="text/css" />
+    <link rel="stylesheet" href="./themes/blue/style.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&amp;display=swap" rel="stylesheet">
     <title>Startpage</title>
+
+  <script>
+    function toggleTheme() {
+      var sheets = document.getElementsByTagName('link');
+      var img = document.getElementById('gif');
+      var select = document.getElementById('themes');
+      var value = select.options[select.selectedIndex].value;
+
+      sheets[0].href = "./themes/" + value + "/style.css";
+      img.src = "./images/" + value + "/gif.gif";
+    }
+  </script>
 </head>
 
 <body>
+    <label for="themes">Theme:</label>
+    <select name="themes" id="themes" onchange="toggleTheme()">
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="orange">Orange</option>
+      <option value="pywal">Pywal</option>
+    </select>
     <div class="wrapper">
     <div class="bg"></div>
         <div class="box-landscape">
             <div class="box">
-                <img class="box-img2" src="./images/gif.gif" alt="No image" />
+                <img class="box-img2" src="./images/blue/gif.gif" alt="No image" id="gif"/>
             </div>
             <div class="links">
                 <div id="content">
