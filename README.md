@@ -1,13 +1,16 @@
 # Aesthetic-Startpage
 A fork of Aesthetic Startpage with pywal theme support and dockerized to get around some browser homepage/new tab restrictions.
 
+Currently docker works. Pywal coming soon.
+
 # Installation
 1. Download/Clone this repository.
-2. Open folder of theme you want to use.
-3. Open index.html file using a web browser.
-4. Copy the url path from the url bar.
-5. Go to web browser's homepage settings.
-6. Select Custom url homepage and paste the url.
+2. `cd Aesthetic-Startpage-Pywal-Dockerized`
+3. `chmod u+x init.sh`
+4. `./init.sh`
+5. `cd docker`
+6. `docker-compose -f docker-compose.yaml up -d`
+7. Navigate to localhost:8765 in browser url bar, and set home page/new tab as desired.
 
 # Themes:
 # 1. Orange
