@@ -14,8 +14,8 @@ if [ ! -d "$cache_dir" ]; then
   echo "Creating '$cache_dir'..."
   mkdir $cache_dir
 
-  echo "Creating index.html..."
-  cp $(pwd)/index.html $cache_dir/index.html
+  echo "Symlinking index.html..."
+  ln -s $(pwd)/index.html $cache_dir/index.html
 
   echo "Symlinking themes..."
   ln -s $(pwd)/themes $cache_dir/themes

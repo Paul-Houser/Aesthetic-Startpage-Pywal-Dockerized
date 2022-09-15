@@ -106,3 +106,13 @@ form input:focus {
   margin-top: 30px;
   box-shadow: 0px 0px 30px rgb(255, 150, 85);
 }
+
+select {
+  background-color: rgba(240, 248, 255, 0);
+  border-color: rgb(253, 129, 57);
+  border-width: thin;
+}
+
+label {
+  color: rgb(253, 129, 57);
+}

@@ -23,13 +23,15 @@
 </head>
 
 <body>
-    <label for="themes">Theme:</label>
-    <select name="themes" id="themes" onchange="toggleTheme()">
-      <option value="blue">Blue</option>
-      <option value="green">Green</option>
-      <option value="orange">Orange</option>
-      <option value="pywal">Pywal</option>
-    </select>
+    <div style="position: absolute; top:10px">
+      <label for="themes">Theme:</label>
+      <select name="themes" id="themes" onchange="toggleTheme()" >
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+        <option value="pywal">Pywal</option>
+      </select>
+    </div>
     <div class="wrapper">
     <div class="bg"></div>
         <div class="box-landscape">
